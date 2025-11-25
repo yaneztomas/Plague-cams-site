@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plague Cams — Monitoreo inteligente de plagas para colegios</title>
+    <meta name="description" content="Plague Cams: plataforma de monitoreo de plagas para colegios con transmisión en vivo, alertas y trazabilidad." />
+    <meta property="og:title" content="Plague Cams — Monitoreo inteligente de plagas" />
+    <meta property="og:description" content="Transmisión en vivo, validación de eventos y reportes para control de plagas en establecimientos educacionales." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/ffffff&text=Plague+Cams" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230f172a'/%3E%3Cpath d='M26 50a24 24 0 1048 0 24 24 0 10-48 0zm36-10l12 10-12 10V40z' fill='%23ffffff'/%3E%3C/svg%3E" />
+    <!-- Tailwind CSS via CDN (para un prototipo rápido) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tipografía agradable por defecto */
+        :root { --pc-primary:#0ea5e9; --pc-dark:#0f172a; --pc-muted:#6b7280; }
+        html { scroll-behavior: smooth; }
+        .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,.08); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-slate-950/80 glass border-b border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+            <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500/20 ring-1 ring-sky-400/30">
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-sky-400" fill="currentColor"><path d="M12 4a8 8 0 100 16 8 8 0 000-16zm3 4v8l5-4-5-4z"/></svg>
+          </span>
+                <span class="text-lg">Plague Cams</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+                <a href="#como-funciona" class="hover:text-white">Cómo funciona</a>
+                <a href="#caracteristicas" class="hover:text-white">Características</a>
+                <a href="#precios" class="hover:text-white">Planes</a>
+                <a href="#contacto" class="rounded-lg bg-sky-500 px-4 py-2 font-medium text-slate-950 hover:bg-sky-400">Contactar</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden rounded-md p-2 hover:bg-slate-800" aria-label="Abrir menú">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 py-3 space-y-2 text-sm">
+            <a href="#como-funciona" class="block py-1 text-slate-300 hover:text-white">Cómo funciona</a>
+            <a href="#caracteristicas" class="block py-1 text-slate-300 hover:text-white">Características</a>
+            <a href="#precios" class="block py-1 text-slate-300 hover:text-white">Planes</a>
+            <a href="#contacto" class="block py-1 rounded-lg bg-sky-500 px-4 py-2 font-medium text-slate-950 hover:bg-sky-400">Contactar</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(14,165,233,.18),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(59,130,246,.12),transparent_35%)]"></div>
+    <div class="relative mx-auto max-w-7xl px-6 pt-20 pb-24 lg:pt-28 lg:pb-32">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
+                Monitoreo inteligente de plagas para colegios
+            </h1>
+            <p class="mt-5 max-w-2xl text-lg text-slate-300">
+                Conecta cámaras económicas, transmite en vivo y recibe alertas verificables.
+                Reduce falsas alarmas, prioriza visitas y mejora la trazabilidad.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#precios" class="rounded-xl bg-sky-500 px-5 py-3 font-semibold text-slate-950 hover:bg-sky-400">Ver planes</a>
+                <a href="#como-funciona" class="rounded-xl border border-slate-700 px-5 py-3 font-semibold hover:border-slate-500">Cómo funciona</a>
+            </div>
+            <dl class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+                <div>
+                    <dt class="text-xs uppercase text-slate-400">Latencia media</dt>
+                    <dd class="text-xl font-semibold">≈ 350 ms</dd>
+                </div>
+                <div>
+                    <dt class="text-xs uppercase text-slate-400">Cámaras activas</dt>
+                    <dd class="text-xl font-semibold">1–4 / recinto</dd>
+                </div>
+                <div>
+                    <dt class="text-xs uppercase text-slate-400">Reducción de falsas alarmas</dt>
+                    <dd class="text-xl font-semibold">hasta 80%</dd>
+                </div>
+                <div>
+                    <dt class="text-xs uppercase text-slate-400">Trazabilidad</dt>
+                    <dd class="text-xl font-semibold">100% con evidencia</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona" class="mx-auto max-w-7xl px-6 py-16">
+    <h2 class="text-2xl font-bold">¿Cómo funciona?</h2>
+    <p class="mt-2 text-slate-300 max-w-3xl">Arquitectura simple y efectiva: publicación desde móvil o cámara IP hacia un servidor local con WebRTC y visualización desde la web.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-4">
+        <div class="rounded-2xl border border-slate-800 p-5">
+            <div class="text-sky-400">1</div>
+            <h3 class="mt-2 font-semibold">Cámara o celular</h3>
+            <p class="text-slate-300">Usa cámaras económicas o un smartphone para transmitir.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-5">
+            <div class="text-sky-400">2</div>
+            <h3 class="mt-2 font-semibold">Transmisión en vivo</h3>
+            <p class="text-slate-300">WebRTC de baja latencia para ver eventos en tiempo real.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-5">
+            <div class="text-sky-400">3</div>
+            <h3 class="mt-2 font-semibold">Validación</h3>
+            <p class="text-slate-300">El operador confirma o descarta alertas con evidencia visual.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-5">
+            <div class="text-sky-400">4</div>
+            <h3 class="mt-2 font-semibold">Visita técnica</h3>
+            <p class="text-slate-300">El fumigador prioriza y registra acciones en el recinto.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CARACTERISTICAS -->
+<section id="caracteristicas" class="bg-slate-900/30">
+    <div class="mx-auto max-w-7xl px-6 py-16">
+        <h2 class="text-2xl font-bold">Características</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+            <article class="rounded-2xl border border-slate-800 p-6">
+                <h3 class="font-semibold">Baja latencia</h3>
+                <p class="mt-2 text-slate-300">Visualiza en vivo con ~350 ms en redes estables.</p>
+            </article>
+            <article class="rounded-2xl border border-slate-800 p-6">
+                <h3 class="font-semibold">Evidencia verificable</h3>
+                <p class="mt-2 text-slate-300">Cada evento queda con timestamp, cámara y registro.</p>
+            </article>
+            <article class="rounded-2xl border border-slate-800 p-6">
+                <h3 class="font-semibold">Panel y reportes</h3>
+                <p class="mt-2 text-slate-300">Resumen de cámaras, alertas y órdenes de trabajo.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="mx-auto max-w-7xl px-6 py-16">
+    <h2 class="text-2xl font-bold">Planes y precios</h2>
+    <p class="mt-2 text-slate-300 max-w-3xl">Planes pensados para establecimientos educacionales. Valores de referencia; podemos ajustar según tamaño y número de cámaras.</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 p-6">
+            <h3 class="text-lg font-semibold">Plan Anual</h3>
+            <p class="mt-1 text-3xl font-extrabold text-sky-400">$1.400.000</p>
+            <p class="text-sm text-slate-400">por colegio / año</p>
+            <ul class="mt-4 space-y-2 text-slate-300 list-disc list-inside">
+                <li>Monitoreo continuo</li>
+                <li>Validación de alertas</li>
+                <li>Reportes mensuales</li>
+            </ul>
+            <a href="#contacto" class="mt-6 inline-block rounded-xl bg-sky-500 px-5 py-3 font-semibold text-slate-950 hover:bg-sky-400">Cotizar</a>
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-6">
+            <h3 class="text-lg font-semibold">Plan Semestral</h3>
+            <p class="mt-1 text-3xl font-extrabold text-sky-400">$850.000</p>
+            <p class="text-sm text-slate-400">por colegio / semestre</p>
+            <ul class="mt-4 space-y-2 text-slate-300 list-disc list-inside">
+                <li>Las mismas funciones</li>
+                <li>Contratación por 6 meses</li>
+                <li>Ideal para piloto</li>
+            </ul>
+            <a href="#contacto" class="mt-6 inline-block rounded-xl border border-slate-700 px-5 py-3 font-semibold hover:border-slate-500">Hablar con ventas</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="bg-slate-900/30">
+    <div class="mx-auto max-w-7xl px-6 py-16">
+        <h2 class="text-2xl font-bold">Contacto</h2>
+        <p class="mt-2 text-slate-300">¿Quieres una demo o una propuesta formal? Déjanos tu correo.</p>
+        <form class="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]" onsubmit="alert('¡Gracias! Te contactaremos.'); return false;">
+            <input required type="email" placeholder="tu@correo.cl" class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none ring-sky-500/0 focus:ring-2" />
+            <button class="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-slate-950 hover:bg-sky-400">Solicitar contacto</button>
+        </form>
+        <p class="mt-4 text-sm text-slate-400">También puedes escribir a <a class="underline" href="mailto:contacto@plaguecams.cl">contacto@plaguecams.cl</a></p>
+    </div>
+</section>
+
+<footer class="border-t border-slate-800">
+    <div class="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-400 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <p>© <span id="yr"></span> Plague Cams. Todos los derechos reservados.</p>
+        <nav class="flex gap-4">
+            <a href="#como-funciona" class="hover:text-white">Cómo funciona</a>
+            <a href="#caracteristicas" class="hover:text-white">Características</a>
+            <a href="#precios" class="hover:text-white">Planes</a>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+</body>
+</html>
